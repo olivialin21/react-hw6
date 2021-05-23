@@ -32,6 +32,7 @@ import {
   BEGIN_ORDER_DETAIL,
   SUCCESS_ORDER_DETAIL,
   FAIL_ORDER_DETAIL,
+  GET_ORDER_LIST
 } from "../utils/constants";
 
 import {
@@ -45,6 +46,7 @@ import {
   createOrderApi,
   getOrderById,
   checkLoginApi,
+  getOrderByUser
 } from "../api";
 
 export const addCartItem = (dispatch, product, qty) => {
@@ -273,4 +275,12 @@ export const checkLogin = (dispatch) => {
     dispatch({ type: LOGOUT_REQUEST });    
   }
   return isLogin;
+}
+
+export const getOrderList = async (dispatch) => {
+  const orderList = await getOrderByUser();
+  dispatch({
+    type: GET_ORDER_LIST,
+    payload: orderList,
+  });
 }

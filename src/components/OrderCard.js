@@ -41,7 +41,7 @@ export default function OrderCard({ orderId }) {
         currencyCode: "USD",
         countryCode: "US"
       }
-    };
+   };
 
    useEffect(() => {
       requestOrderDetail(dispatch, orderId)
@@ -102,7 +102,7 @@ export default function OrderCard({ orderId }) {
                         )}
                         <div className="cart-total-price-wrap">
                            Total
-            <div className="cart-total-price">${order.totalPrice}</div>
+                           <div className="cart-total-price">${order.totalPrice}</div>
                         </div>
                      </div>
 
@@ -143,7 +143,6 @@ export default function OrderCard({ orderId }) {
                            }}
                         />
                      </div>
-
                   </Col>
                </Row>
 
