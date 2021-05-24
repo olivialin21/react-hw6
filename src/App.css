@@ -723,3 +723,17 @@ span.ham-menu-bar3--touch {
 .card-body {
   padding: 1rem;
 }
+
+.orderList-title{
+  margin-top: 20px;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+}
+
+.orderList-list--empty{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
