@@ -89,13 +89,13 @@ export const savePaymentMethod = (dispatch, paymentMethod) => {
 
 export const feedJSONToFirebase = async (dispatch) => {
   dispatch({ type: BEGIN_PRODUCTS_FEED });
-  try {
+  // try {
     await feedProducts();
     dispatch({ type: SUCCESS_PRODUCTS_FEED });
-  } catch (error) {
-    console.log(error);
-    dispatch({ type: FAIL_PRODUCTS_FEED, payload: error });
-  }
+  // } catch (error) {
+  //   console.log(error);
+  //   dispatch({ type: FAIL_PRODUCTS_FEED, payload: error });
+  // }
 }
 
 export const setProductDetail = async (dispatch, productId, qty) => {
